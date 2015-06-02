@@ -12,7 +12,7 @@ Before getting started, users should login to login01.osgconnect.org and get a c
 ```
 % ssh login01.osgconnect.org
 $ tutorial htcondor_transfer
-$ cd osg-htcondor_transfer
+$ cd tutorial-htcondor_transfer
 ```
 Word Distribution Example
 -------------------------
