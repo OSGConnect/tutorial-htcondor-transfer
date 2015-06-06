@@ -1,22 +1,22 @@
-OSG Connect Tutorial: Transferring data with HTCondor
-=====================================================
+# Transferring data with HTCondor
 
-Overview
---------
+## Overview
 
-This page will introduce users to transferring files using HTCondor's built-in transfer mechanisms.  HTCondor has a built-in mechanism to transfer binaries and files to and from compute nodes.  If users have relatively small amounts of data and binaries to transfer (<100MB) or need to do ad-hoc job submissions, then this mechanism can be effective.
+This page will introduce you to transferring files using HTCondor's built-in transfer mechanisms.  HTCondor has a built-in mechanism to transfer binaries and files to and from compute nodes.  If you have relatively small amounts of data and binaries to transfer (<1 Gigabyte/job) then this mechanism can be effective.
 
-Preliminaries
--------------
-Before getting started, users should login to login01.osgconnect.org and get a copy of the tutorial files:
+## Preliminaries
+
+Login to login01.osgconnect.org and get a copy of the tutorial files:
 ```
 % ssh login01.osgconnect.org
 $ tutorial htcondor_transfer
 $ cd tutorial-htcondor_transfer
 ```
-Word Distribution Example
--------------------------
-This example will use the HTCondor transfer mechanisms to transfer a binary (distribution) and a file with a list of words (random_words) to compute nodes that are running the jobs. Create the condor file *transfer.submit*:
+
+## Word Distribution Example
+
+This example will use the HTCondor transfer mechanisms to transfer a binary (distribution) and a file with a list of words (random_words) to compute nodes that are running the jobs. Create the condor file `transfer.submit`:
+
 ```
 universe = vanilla
 notification=never
@@ -31,9 +31,10 @@ when_to_transfer_output = ON_EXIT
  
 queue 50
 ```
-The key parts of the submit file are under the transfer_input_files parameter that gives a comma separated list of paths to the files that will be transferred.  In addition, ShouldTransferFiles needs to be set to YES and when_to_transfer_output needs to be set to ON_EXIT in order to make sure that the HTCondor will return the output.
 
-**path warning:** You must run condor_submit in the same directory that you created the files and directories in. Otherwise HTCondor will give you an error due to not being able to find the distribution and random_words files
+The key parts of the submit file are under the `transfer_input_files` parameter that gives a comma separated list of paths to the files that will be transferred.  In addition, `ShouldTransferFiles` needs to be set to `YES` and `when_to_transfer_output` needs to be set to `ON_EXIT` in order to make sure that the HTCondor will return the output.
+
+**path warning:** You must run `condor_submit` in the same directory that you created the files and directories in. Otherwise HTCondor will give you an error due to not being able to find the distribution and random_words files
 
 Now submit the job: 
 ```
@@ -59,3 +60,5 @@ Asoka      |42 (0.41%) +++++++++++++++++++++++++++++++++++++++++++++++++++++
 Alcatraz   |41 (0.40%) ++++++++++++++++++++++++++++++++++++++++++++++++++++
 ```
 
+## Getting Help
+For assistance or questions, please email the OSG User Support team  at `user-support@opensciencegrid.org` or visit the [help desk and community forums](http://support.opensciencegrid.org).
