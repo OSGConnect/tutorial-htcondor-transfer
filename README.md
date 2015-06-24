@@ -8,7 +8,7 @@ This page will introduce you to transferring files using HTCondor's built-in tra
 
 Login to login01.osgconnect.org and get a copy of the tutorial files:
 
-	% ssh login01.osgconnect.org
+	$ ssh login01.osgconnect.org
 	$ tutorial htcondor_transfer
 	$ cd tutorial-htcondor_transfer
 
