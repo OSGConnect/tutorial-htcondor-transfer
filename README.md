@@ -7,6 +7,7 @@ This page will introduce you to transferring files using HTCondor's built-in tra
 ## Preliminaries
 
 Login to login01.osgconnect.org and get a copy of the tutorial files:
+
 	% ssh login01.osgconnect.org
 	$ tutorial htcondor_transfer
 	$ cd tutorial-htcondor_transfer
@@ -33,9 +34,11 @@ The key parts of the submit file are under the `transfer_input_files` parameter 
 **path warning:** You must run `condor_submit` in the same directory that you created the files and directories in. Otherwise HTCondor will give you an error due to not being able to find the distribution and random_words files
 
 Now submit the job: 
+
 	$ condor_submit transfer.submit
 
 When the jobs are completed, verify the output:
+
 	$ cat logs/transfer.out.0
 	Ashkenazim |45 (0.44%) +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	BIOS       |45 (0.44%) +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
