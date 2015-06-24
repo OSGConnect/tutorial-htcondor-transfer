@@ -56,5 +56,6 @@ When the jobs are completed, verify the output:
 	Asoka      |42 (0.41%) +++++++++++++++++++++++++++++++++++++++++++++++++++++
 	Alcatraz   |41 (0.40%) ++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+
 ## Getting Help
 For assistance or questions, please email the OSG User Support team  at `user-support@opensciencegrid.org` or visit the [help desk and community forums](http://support.opensciencegrid.org).
