@@ -6,9 +6,9 @@ This page will introduce you to transferring files using HTCondor's built-in tra
 
 ## Preliminaries
 
-Login to login01.osgconnect.org and get a copy of the tutorial files:
+Login to `login.osgconnect.org` and get a copy of the tutorial files:
 
-	$ ssh login01.osgconnect.org
+	$ ssh login.osgconnect.org
 	$ tutorial htcondor_transfer
 	$ cd tutorial-htcondor_transfer
 
@@ -58,4 +58,4 @@ When the jobs are completed, verify the output:
 
 
 ## Getting Help
-For assistance or questions, please email the OSG User Support team  at `user-support@opensciencegrid.org` or visit the [help desk and community forums](http://support.opensciencegrid.org).
+For assistance or questions, please email the OSG User Support team  at [user-support@opensciencegrid.org](mailto:user-support@opensciencegrid.org) or visit the [help desk and community forums](http://support.opensciencegrid.org).
